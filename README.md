@@ -22,6 +22,9 @@ python manage.py train
 
 # 前端说明
 > 如果想要修正评论数据或者停止词，可以clone前端代码编译后，使用  
+> 尝试地址: http://emotion.buxingxing.com  
+> 用户名：buxingxing  
+> 密码：123  
 
 # 注意
 1. 有关stopwords
