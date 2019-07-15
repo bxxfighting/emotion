@@ -13,7 +13,7 @@ pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 执行命令:  
 ```
 python manage.py migrate
-python manage.py makemigrations 
+python manage.py makemigrations account dataset
 python manage.py migrate
 python manage.py create_super_user root root
 python manage.py init_dataset
