@@ -10,5 +10,5 @@ WORKDIR /project
 ADD . /project
 RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 RUN chmod 755 /project/start.sh
-EXPOSE 18785
+EXPOSE 12321
 CMD ["/project/start.sh"]
