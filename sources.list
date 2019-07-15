@@ -1,0 +1,6 @@
+# deb http://mirrors.tuna.tsinghua.edu.cn/debian stretch main contrib non-free
+# deb http://mirrors.tuna.tsinghua.edu.cn/debian stretch-updates main contrib non-free
+# deb http://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main contrib non-free
+deb http://mirrors.163.com/debian/ stretch main contrib non-free
+deb http://mirrors.163.com/debian/ stretch-updates main non-free contrib
+deb http://mirrors.163.com/debian-security/ stretch/updates main non-free contrib
