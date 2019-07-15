@@ -16,6 +16,13 @@ class CommentModel(BaseModel):
         (LABEL_POSITIVE, '正向评价'),
         (LABEL_NEGATIVE, '负向评价'),
     )
+    ST_UNCHECK = 10
+    ST_CHECKED = 20
+    ST_CHOICES = (
+        (ST_UNCHECK, '未修正'),
+        (ST_CHECKED, '已修正'),
+    )
+    status = models.SmallIntegerField('是否修正', choices=ST_CHOICES, default=ST_UNCHECK)
     comment = models.TextField('评价文本')
     label = models.SmallIntegerField('情绪标注', choices=LABEL_CHOICES)
 

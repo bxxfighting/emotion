@@ -48,11 +48,13 @@ def init_stopword(path):
         StopwordModel.objects.bulk_create(obj_list)
 
 
-def list_comment(label=None, keyword=None, page_num=None, page_size=None):
+def list_comment(status=None, label=None, keyword=None, page_num=None, page_size=None):
     '''
     获取评价列表
     '''
     base_query = CommentModel.objects.filter(is_deleted=False)
+    if status:
+        base_query = base_query.filter(status=status)
     if label:
         base_query = base_query.filter(label=label)
     if keyword:
@@ -79,6 +81,15 @@ def update_comment(obj_id, label):
     if not obj:
         raise errors.CommonError('评论不存在')
     obj.label = label
+    obj.status = CommentModel.ST_CHECKED
+    obj.save()
+
+
+def check_comment(obj_id):
+    obj = CommentModel.objects.filter(id=obj_id, is_deleted=False).first()
+    if not obj:
+        raise errors.CommonError('评论不存在')
+    obj.status = CommentModel.ST_CHECKED
     obj.save()
 
 

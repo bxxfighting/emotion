@@ -11,11 +11,13 @@ class ListCommentView(Api):
     def POST(self, request):
         data = json.loads(request.body)
         label = data.get('label')
+        status = data.get('status')
         keyword = data.get('keyword')
         page_num = data.get('page_num')
         page_size = data.get('page_size')
         data = {
             'label': label,
+            'status': status,
             'keyword': keyword,
             'page_num': page_num,
             'page_size': page_size,
@@ -35,6 +37,18 @@ class UpdateCommentView(Api):
             'label': label,
         }
         data = data_ctl.update_comment(**data)
+        return data
+
+
+class CheckCommentView(Api):
+
+    def POST(self, request):
+        data = json.loads(request.body)
+        obj_id = data.get('id')
+        data = {
+            'obj_id': obj_id,
+        }
+        data = data_ctl.check_comment(**data)
         return data
 
 
