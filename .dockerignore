@@ -1,0 +1,7 @@
+var
+__pycache__
+README.md
+.git
+migrations
+emotion/local_settings.py
+*.sqlite3
