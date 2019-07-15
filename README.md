@@ -3,7 +3,7 @@
 > 可以重新修改标注结果, 然后通过通过训练生成检测模型后，可以用于新的评论的情绪预测  
 
 # 使用说明
-[前端代码库](!https://github.com/bxxfighting/emotion-web)
+[前端代码库](https://github.com/bxxfighting/emotion-web)
 
 安装环境：  
 python 3.6.8  
