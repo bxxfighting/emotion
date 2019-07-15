@@ -12,9 +12,13 @@ def init_comment(path):
     df = pd.read_csv(path)
     obj_list = []
     index = 1
+    label_dict = {
+        0: CommentModel.LABEL_POSITIVE,
+        1: CommentModel.LABEL_NEGATIVE,
+    }
     for label, comment in zip(df.label.values, df.comment.values):
         data = {
-            'label': int(label),
+            'label': label_dict[int(label)],
             'comment': comment,
         }
         obj_list.append(CommentModel(**data))
