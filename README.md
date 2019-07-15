@@ -20,6 +20,9 @@ python manage.py init_dataset
 python manage.py train
 ```
 
+# 前端说明
+> 如果想要修正评论数据或者停止词，可以clone前端代码编译后，使用  
+
 # 注意
 1. 有关stopwords
 对于stopwords其实不同场景，需求是不同的，我开始拿到这个stopwords文件时，直接使用的,  
