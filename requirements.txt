@@ -6,7 +6,7 @@ django-cors-headers==3.0.2
 gevent==1.4.0
 greenlet==0.4.15
 gunicorn==19.9.0
-ipython==7.6.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.14.1
 jieba==0.39
